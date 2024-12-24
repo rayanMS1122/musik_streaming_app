@@ -1,0 +1,56 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services'  // Firebase services
+    id "kotlin-android"  // Kotlin plugin for Android
+    id "dev.flutter.flutter-gradle-plugin" // Flutter plugin
+}
+
+android {
+    namespace = "com.example.musik_streaming_app"
+    compileSdk = 34 // Updated compile SDK version
+    
+    defaultConfig {
+         applicationId "com.example.musik_streaming_app"
+        minSdkVersion 23
+        targetSdkVersion 34 // Match target SDK version with compile SDK version
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+        resValue "string", "applicationName", "com.example.musik_streaming_app.MyApplication"
+
+        manifestPlaceholders = [
+            appAuthRedirectScheme: 'com.example.musik_streaming_app',
+            applicationName: "" // Add this line to resolve the error
+
+        ]
+        multiDexEnabled true  // Enable MultiDex for large apps
+
+        // Optional: Configure multidex (if required for very large apps)
+        multiDexKeepProguard file('multidex-config.pro')
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug // Set up your signing config here
+        }
+    }
+}
+
+// Apply the Google Services plugin to enable Firebase services
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    implementation 'com.google.firebase:firebase-auth:21.0.1' // Firebase Auth version
+    implementation 'com.google.android.gms:play-services-auth:20.0.1' // Google SignIn
+    implementation 'androidx.multidex:multidex:2.0.1' // Multidex for large apps
+    implementation 'com.google.firebase:firebase-core:21.1.0' // Correct version of firebase-core
+    // Other dependencies
+}

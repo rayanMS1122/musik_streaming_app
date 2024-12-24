@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "251836884122",
+    "project_id": "melodyflow-now-playing",
+    "storage_bucket": "melodyflow-now-playing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251836884122:android:9b59e4c2605762261aeb23",
+        "android_client_info": {
+          "package_name": "com.example.e_commerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEovhkxVHv5Qp3LAHU1bFXxsVszBe-lPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251836884122:android:0c725acc5e17188e1aeb23",
+        "android_client_info": {
+          "package_name": "com.example.musik_streaming_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEovhkxVHv5Qp3LAHU1bFXxsVszBe-lPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251836884122:android:b17788c3d26355521aeb23",
+        "android_client_info": {
+          "package_name": "com.example.navigation_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEovhkxVHv5Qp3LAHU1bFXxsVszBe-lPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
